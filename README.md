@@ -38,8 +38,7 @@ Example requests:
 Create User
 --------------
 ```
-curl -X POST -H "Accept: application/json"  -H "Content-Type: application/json"\ 
-http://localhost:3000/api/v1/users/ -d\
+curl -X POST -H "Accept: application/json"  -H "Content-Type: application/json" http://localhost:3000/api/v1/users/ -d\
   '{ "user":
     {
       "email":"hello@hello.com",
@@ -51,8 +50,7 @@ http://localhost:3000/api/v1/users/ -d\
 Sign in User
 --------------
 ```
-curl -X POST -H "Accept: application/json"  -H "Content-Type: application/json"\
-http://localhost:3000/api/v1/users/sign_in -d\
+curl -X POST -H "Accept: application/json"  -H "Content-Type: application/json" http://localhost:3000/api/v1/users/sign_in -d\
   '{ "user":
     { 
       "email":"hello@hello.com",
@@ -63,14 +61,12 @@ http://localhost:3000/api/v1/users/sign_in -d\
 Sign out
 --------------
 ```
-curl -X DELETE -H "X-USER-TOKEN: MTMEGgwVZxUidW2-iMjj" -H "Content-Type: application/json"\
-http://localhost:3000/api/v1/users/sign_out
+curl -X DELETE -H "X-USER-TOKEN: MTMEGgwVZxUidW2-iMjj" -H "Content-Type: application/json" http://localhost:3000/api/v1/users/sign_out
 ```
 Reset password
 --------------
 ```
-curl -X POST -H "Accept: application/json"  -H "Content-Type: application/json"\
-http://localhost:3000/api/v1/users/password -d\
+curl -X POST -H "Accept: application/json"  -H "Content-Type: application/json" http://localhost:3000/api/v1/users/password -d\
   '{ "user":
     {
       "email":"hello@hello.com"
@@ -78,21 +74,19 @@ http://localhost:3000/api/v1/users/password -d\
   }'
 ```
 ```
-curl -X PUT -H "Content-Type: application/json"\
-http://localhost:3000/api/v1/users/password -d\
+curl -X PUT -H "Content-Type: application/json" http://localhost:3000/api/v1/users/password -d\
   '{ "user":
     {
       "password":"demiandemian",
-      "password_confirmation":"demiandemian", "reset_password_token":"1dcce3ffa47fedf0c0fe1d3debba6686982f7e11ff46c43fbcdabd5d7eabadaa"
+      "password_confirmation":"demiandemian",
+      "reset_password_token":"1dcce3ffa47fedf0c0fe1d3debba6686982f7e11ff46c43fbcdabd5d7eabadaa"
     }
   }'
 ```
 Update user
 --------------
 ```
-curl -X PUT -H "X-USER-TOKEN: vxKbHC4zQoYZp2ztJjVB" -H "Accept: application/json"\ 
--H "Content-Type: application/json"\
-http://localhost:3000/api/v1/users/3 -d\ 
+curl -X PUT -H "X-USER-TOKEN: vxKbHC4zQoYZp2ztJjVB" -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:3000/api/v1/users/3 -d\ 
   '{ "user":
     {
       "username":"juanito"
@@ -103,8 +97,7 @@ http://localhost:3000/api/v1/users/3 -d\
 Facebook Login
 --------------
 ```
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json"\
-http://localhost:3000/api/v1/users/facebook_login -d\
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:3000/api/v1/users/facebook_login -d\
   '{ "user":
     {
       "facebook_id":"id1234",
@@ -118,9 +111,7 @@ http://localhost:3000/api/v1/users/facebook_login -d\
 Update user with facebook
 --------------
 ```
-curl -X PUT -H "X-USER-TOKEN: f84KxyzgwsjDyoJjbwbJ" -H "X-USER-FACEBOOK: id1234"\
--H "Accept: application/json"  -H "Content-Type: application/json"\
-http://localhost:3000/api/v1/users/3 -d \
+curl -X PUT -H "X-USER-TOKEN: f84KxyzgwsjDyoJjbwbJ" -H "X-USER-FACEBOOK: id1234" -H "Accept: application/json"  -H "Content-Type: application/json" http://localhost:3000/api/v1/users/3 -d\
   '{ "user":
     {
       "username":"juanito2"
